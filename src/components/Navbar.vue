@@ -73,3 +73,5 @@ export default {
   }
 };
 </script>
+
+<style scoped src="@/assets/style.css"></style>
