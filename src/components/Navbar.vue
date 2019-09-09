@@ -1,16 +1,11 @@
 <template>
   <nav>
-    <div class="menu-icon">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-
-    <ul>
-      <li>
-        <a href="#">Link</a>
-      </li>
-    </ul>
+    <!-- dynamic component goes here -->
+    <component v-if="typeof config.brand == 'function'" :is="config.brand()" />
+    <header v-else>
+      <!-- set string in h3 -->
+      <h3>{{ config.brand }}</h3>
+    </header>
   </nav>
 </template>
 
@@ -19,8 +14,7 @@ export default {
   name: "navbar",
   props: {
     config: {
-      type: Object,
-      required: true
+      type: Object
     }
   }
 };
