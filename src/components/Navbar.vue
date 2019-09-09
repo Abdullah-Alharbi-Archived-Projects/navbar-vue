@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <!-- dynamic component goes here -->
+    <!-- dynamic component -->
     <component v-if="typeof config.brand == 'function'" :is="config.brand()" />
     <header v-else>
       <!-- set string in h3 -->
