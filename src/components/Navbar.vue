@@ -1,9 +1,7 @@
 <template>
   <nav>
-    <!-- dynamic component -->
     <component v-if="brandIsFunction" :is="config.brand()" />
     <header v-else>
-      <!-- set string in h3 -->
       <h3>{{ config.brand }}</h3>
     </header>
 
