@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <navbar :config="navbar" @menu-click="handleMobileMode" />
+
+    <h1>Custom navbar component</h1>
   </div>
 </template>
 
@@ -16,15 +18,15 @@ export default {
         brand: "my-awesome-navbar",
         links: [
           {
-            to: "/home/",
+            to: "?",
             value: "Home"
           },
           {
-            to: "/about/",
+            to: "?",
             value: "About"
           },
           {
-            to: "/projects/",
+            to: "?",
             value: "Projects"
           }
         ],
