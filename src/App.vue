@@ -1,18 +1,51 @@
 <template>
   <div id="app">
-    <navbar />
+    <navbar :config="navbar" @menu-click="handleMobileMode" />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
+
 export default {
   name: "app",
-  components: { Navbar }
+  components: { Navbar },
+  data() {
+    return {
+      navbar: {
+        brand: "my-awesome-navbar",
+        links: [
+          {
+            to: "/home/",
+            value: "Home"
+          },
+          {
+            to: "/about/",
+            value: "About"
+          },
+          {
+            to: "/projects/",
+            value: "Projects"
+          }
+        ],
+        mobileMode: false
+      }
+    };
+  },
+  methods: {
+    handleMobileMode() {
+      this.navbar.mobileMode = !this.navbar.mobileMode;
+    }
+  }
 };
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
