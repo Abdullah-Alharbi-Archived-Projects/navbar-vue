@@ -1,5 +1,11 @@
 # navbar-vue
 
+> custom navbar with great animation
+
+## preview
+
+[demo](https://w2alharbime.github.io/navbar-vue/)
+
 ## Navbar configurations
 
 ```
